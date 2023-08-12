@@ -1,7 +1,7 @@
 import os
 import boto3
 
-sqs = boto3.client('sqs', verify=False)
+sqs = boto3.client('sqs')
 QUEUE_URL = os.environ.get('SQS_QUEUE_URL')
 
 
