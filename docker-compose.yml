@@ -16,6 +16,8 @@ services:
     app:
         container_name: broker
         image: broker
+        env_file:
+            - .env
         build:
             context: ./
             dockerfile: Dockerfile
