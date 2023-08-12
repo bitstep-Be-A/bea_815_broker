@@ -20,7 +20,7 @@ def create_progress(status):
         
         image_progress = ImageProgress(
             _id="",
-            status=status,
+            status=status.value,
             imageUrl="",
             worker=None
         )
