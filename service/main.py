@@ -29,7 +29,7 @@ def create_progress(status):
 
         return True, Img2ImgResponse(id=doc_ref.id)
     except Exception as e:
-        print(e.args[0])
+        print(e)
         return False, None
 
 
