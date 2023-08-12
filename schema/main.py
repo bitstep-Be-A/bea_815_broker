@@ -29,9 +29,16 @@ class Status(Enum):
 
 class ImageProgress(BaseModel):
     _id: str
-    status: Status
+    status: str
     imageUrl: str
     worker: Optional[str] = None
+
+    @validator('status')
+    def validate_status(cls, v):
+        for _, member in Status.__members__.items():
+            if member.value == v:
+                return v
+        raise ValidationError("status value is invalid")
 
 
 class ImageDataMessageDto(Img2imgRequestBody):

@@ -9,7 +9,7 @@ from schema.main import ImageProgress, Img2ImgResponse
 DB = use_database()
 
 
-def create_progress(status):
+def create_progress(status: str):
     @firestore.transactional
     def update_in_transaction(transaction, doc_ref):
         doc_id = doc_ref.id
@@ -20,7 +20,7 @@ def create_progress(status):
         
         image_progress = ImageProgress(
             _id="",
-            status=status.value,
+            status=status,
             imageUrl="",
             worker=None
         )

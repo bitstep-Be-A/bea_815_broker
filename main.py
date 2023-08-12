@@ -21,7 +21,7 @@ app.add_middleware(
 
 @app.post("/api/v1/img2img")
 def img2img_api(req: Img2imgRequestBody) -> Img2ImgResponse:
-    is_success, response = create_progress(Status.SEND)
+    is_success, response = create_progress(Status.SEND.value)
     if (not is_success):
         raise HTTPException(status_code=400, detail="progress등록에 실패하였습니다.")
 
