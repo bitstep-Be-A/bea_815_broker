@@ -4,6 +4,7 @@ RUN apt-get -y update && \
     apt-get install -y --no-install-recommends \
     build-essential \
     openssl libssl-dev \
+    ca-certificates \
     python3-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
