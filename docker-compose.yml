@@ -14,8 +14,8 @@ services:
             - nginx_network
         
     app:
-        container_name: broker
-        image: broker
+        container_name: publisher
+        image: publisher
         env_file:
             - .env
         build:

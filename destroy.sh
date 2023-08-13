@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker rm -f broker webserver
-docker rmi broker nginx:alpine
+docker rm -f publisher webserver
+docker rmi publisher nginx:alpine
