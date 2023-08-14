@@ -45,7 +45,7 @@ sudo docker image prune -a
 ## docker 없이 실행
 
 ```console
-gunicorn -k uvicorn.workers.UvicornWorker --access-logfile ./logs/gunicorn-access.log main:app --bind 0.0.0.0:8080 --workers 2 --daemon
+gunicorn -k uvicorn.workers.UvicornWorker --access-logfile ./logs/gunicorn-access.log main:app --bind 0.0.0.0:7860 --workers 2 --daemon
 ```
 
 * log 조회
