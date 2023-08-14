@@ -6,6 +6,7 @@ After=network.target
 User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/bea_815_publisher
+export $(cat .env | grep -v '^#' | xargs)
 ExecStart=gunicorn \
           main:app \
           --workers 4 \
