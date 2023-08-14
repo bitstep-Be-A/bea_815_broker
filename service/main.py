@@ -34,4 +34,5 @@ def create_progress(status: str):
 
 
 def send_message(dto):
-    sqs.send_message(json.dumps(dto.dict()), dto.id)
+    body = sqs.send_message(json.dumps(dto.dict()), dto.id)
+    print(body)

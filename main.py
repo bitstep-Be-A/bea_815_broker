@@ -25,11 +25,9 @@ def img2img_api(req: Img2imgRequestBody) -> Img2ImgResponse:
     if (not is_success):
         raise HTTPException(status_code=400, detail="progress등록에 실패하였습니다.")
 
-    body = send_message(ImageDataMessageDto(
+    send_message(ImageDataMessageDto(
         **req.dict(),
         id=response.id
     ))
-
-    print(body)
 
     return response
