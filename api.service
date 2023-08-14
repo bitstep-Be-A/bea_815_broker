@@ -6,9 +6,9 @@ After=network.target
 User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/projects/myapi
-ExecStart=/home/ubuntu/venvs/myapi/bin/gunicorn \
+ExecStart=gunicorn \
           main:app \
-          --workers 2 \
+          --workers 4 \
           --worker-class uvicorn.workers.UvicornWorker \
           --bind 0:7860
 [Install]
