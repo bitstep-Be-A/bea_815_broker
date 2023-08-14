@@ -41,23 +41,3 @@ sudo docker system prune
 sudo docker volume prune -a
 sudo docker image prune -a
 ```
-
-## docker 없이 실행
-
-```console
-sudo cp api.service /etc/systemd/system/api.service
-sudo systemctl daemon-reload
-sudo systemctl start api.service
-
-# restart
-sudo systemctl restart api.service
-
-# status
-sudo systemctl status api.service
-```
-
-* log 조회
-
-```console
-journalctl -u api.service
-```
